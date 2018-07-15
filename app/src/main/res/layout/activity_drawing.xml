@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrawingActivity"
+    android:orientation="vertical"
+    android:padding="@dimen/layout_padding"
+    android:background="@drawable/background_main">
+
+  <!--selection area-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/text_padding"
+        android:weightSum="3">
+
+        <!--Line color-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/text_padding"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lineColor"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/rdbGpColor">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/red"
+                    android:id="@+id/rbnRed"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/green"
+                    android:id="@+id/rbnGreen"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blue"
+                    android:id="@+id/rbnBlue"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <!--Line thickness-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/text_padding"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lineThickness"/>
+
+            <Spinner
+                android:id="@+id/spnThick"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--Arrow Keys-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:padding="@dimen/text_padding"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/arrowKeys"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/arrowKeyplaceHolder"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/imgUp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_key_arrow_up_black_24dp"
+                    android:layout_above="@+id/arrowKeyplaceHolder"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgLeft"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_key_arrow_left_black_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/arrowKeyplaceHolder"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgRight"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_key_arrow_right_black_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/arrowKeyplaceHolder"
+                    />
+                <ImageView
+                    android:id="@+id/imgDown"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_key_arrow_down_black_24dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/arrowKeyplaceHolder"/>
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--display x and y-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x= "/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/xValue"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="y= "/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yValue"
+        android:layout_weight="1"
+        android:maxLength="10"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:id="@+id/btnClear"
+        android:onClick="clearAll"/>
+
+</LinearLayout>
+
+<!--show-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ImageViewForDrawing"
+            />
+    </LinearLayout>
+
+</LinearLayout>

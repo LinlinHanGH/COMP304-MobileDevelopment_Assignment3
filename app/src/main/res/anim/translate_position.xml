@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is a simple XML definition for a Animation.
+	Over the course of 5 seconds, move 100 up and then 100 back down the Y axis. -->
+<set
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
+
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="359"
+        android:repeatMode="restart"
+        android:pivotX="500"
+        android:pivotY="470"
+        android:duration="3000"
+        android:repeatCount="infinite"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:fillAfter="true"
+        android:fillBefore="false"/>
+
+    <scale
+
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:toXScale="0.5"
+        android:toYScale="0.5"
+        android:duration="1500"
+        android:pivotX="480"
+        android:pivotY="470"
+        android:repeatCount="-1"
+        android:repeatMode="reverse"/>
+
+
+</set>

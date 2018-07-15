@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">LinlinHan_COMP304_Assignment3</string>
+    <string name="mainIntro">Select an option to perform a task</string>
+    <string name="lineColor">Line Color</string>
+    <string name="lineThickness">Line Thickness</string>
+    <string name="arrowKeys">Arrow Keys</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string-array name="activities">
+        <item>Drawing</item>
+        <item>Framed Animation</item>
+        <item>Tweened Animation</item>
+    </string-array>
+
+    <string-array name="thickness">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+    </string-array>
+</resources>
